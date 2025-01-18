@@ -20,123 +20,178 @@ namespace PhucHN3
 
         static void Main(string[] args)
         {
-            Console.WriteLine("1. Variables and Data Types");
-            Console.WriteLine("\n2. Conditional Statements");
-            Console.WriteLine("\n3. Loops");
-            Console.WriteLine("\n4. Arrays and Lists");
-            Console.WriteLine("\n5. Boxing and Unboxing");
-            Console.WriteLine("\n6. Value Type and Reference Type");
-            Console.WriteLine("\n7. Struct");
-            Console.WriteLine("\n8. DateTime");
-            Console.WriteLine("\n9. Working with Strings");
-            Console.WriteLine("\n10. Exception Handling");
-            Console.WriteLine("\n11. Functions");
-            Console.WriteLine("\n12. Classes and Objects");
-            Console.WriteLine("\n13. Inheritance");
-            Console.WriteLine("\n14. Polymorphism");
-            Console.WriteLine("\n15. Exception Handling with Custom Exceptions");
-            Console.WriteLine("\n16. Recursion in Functions");
-            Console.WriteLine("\n17. Using Enumerations");
-            Console.WriteLine("\n18. Properties in Classes");
-            Console.WriteLine("\n19. Using Tuples");
-            Console.WriteLine("\n20. Collections");
-            Console.WriteLine("\n21. Working with Files");
-            Console.WriteLine("\n22. Using Nullable Types");
-            Console.WriteLine("\n23. Debugging Basics");
-            Console.Write("\nchosse number: ");
-            int n = int.Parse(Console.ReadLine());
-            if (n == 0 || n == null)
+            bool next = true;
+            while (next)
             {
-                Console.Write("khong so nao duoc chon.");
-                return;
+                Console.Clear();
+                Console.WriteLine("1. Variables and Data Types");
+                Console.WriteLine("2. Conditional Statements");
+                Console.WriteLine("3. Loops");
+                Console.WriteLine("4. Arrays and Lists");
+                Console.WriteLine("5. Boxing and Unboxing");
+                Console.WriteLine("6. Value Type and Reference Type");
+                Console.WriteLine("7. Struct");
+                Console.WriteLine("8. DateTime");
+                Console.WriteLine("9. Working with Strings");
+                Console.WriteLine("10. Exception Handling");
+                Console.WriteLine("11. Functions");
+                Console.WriteLine("12. Classes and Objects");
+                Console.WriteLine("13. Inheritance");
+                Console.WriteLine("14. Polymorphism");
+                Console.WriteLine("15. Exception Handling with Custom Exceptions");
+                Console.WriteLine("16. Recursion in Functions");
+                Console.WriteLine("17. Using Enumerations");
+                Console.WriteLine("18. Properties in Classes");
+                Console.WriteLine("19. Using Tuples");
+                Console.WriteLine("20. Collections");
+                Console.WriteLine("21. Working with Files");
+                Console.WriteLine("22. Using Nullable Types");
+                Console.WriteLine("23. Debugging Basics");
+                Console.Write("chosse number: ");
+                int n = int.Parse(Console.ReadLine());
+                if (n == 0 || n == null)
+                {
+                    Console.Write("khong so nao duoc chon.");
+                    return;
+                }
+                switch (n)
+                {
+                    case 1:
+                        Console.Clear();
+                        VariablesAndDataTypes();
+                        next = NextOrStop();
+                        break;
+                    case 2:
+                        Console.Clear();
+                        IfElse();
+                        next = NextOrStop();
+                        break;
+                    case 3:
+                        Console.Clear();
+                        Loop();
+                        next = NextOrStop();
+                        break;
+                    case 4:
+                        Console.Clear();
+                        ArrayList();
+                        next = NextOrStop();
+                        break;
+                    case 5:
+                        Console.Clear();
+                        BoxingandUnboxing();
+                        next = NextOrStop();
+                        break;
+                    case 6:
+                        Console.Clear();
+                        Type();
+                        next = NextOrStop();
+                        break;
+                    case 7:
+                        Console.Clear();
+                        Struct();
+                        next = NextOrStop();
+                        break;
+                    case 8:
+                        Console.Clear();
+                        DateTime1();
+                        next = NextOrStop();
+                        break;
+                    case 9:
+                        Console.Clear();
+                        WorkString();
+                        next = NextOrStop();
+                        break;
+                    case 10:
+                        Console.Clear();
+                        Exception();
+                        next = NextOrStop();
+                        break;
+                    case 11:
+                        Console.Clear();
+                        Functions();
+                        next = NextOrStop();
+                        break;
+                    case 12:
+                        Console.Clear();
+                        Student student = new Student("PhucHN3", 10);
+                        Console.WriteLine("Student Details:");
+                        student.Display();
+                        List<int> scores = new List<int> { 1, 2, 3, 4, 5, 6 };
+                        double average = student.CalculateAverageMarks(scores);
+                        Console.WriteLine($"Average Marks: {average}");
+                        next = NextOrStop();
+                        break;
+                    case 13:
+                        Console.Clear();
+                        Car car = new Car("Toyota", "Corolla", "Petrol");
+                        car.DisplayCarInfo();
+                        next = NextOrStop();
+                        break;
+                    case 14:
+                        Console.Clear();
+                        Shape rectangle = new Rectangle(5, 10);
+                        Console.WriteLine(rectangle.CalculateArea());
+
+                        Shape circle = new Circle(7);
+                        Console.WriteLine(circle.CalculateArea());
+                        next = NextOrStop();
+                        break;
+                    case 15:
+                        Console.Clear();
+                        CustomException();
+                        next = NextOrStop();
+                        break;
+                    case 16:
+                        Console.Clear();
+                        Recursion();
+                        next = NextOrStop();
+                        break;
+                    case 17:
+                        Console.Clear();
+                        Enumeration();
+                        next = NextOrStop();
+                        break;
+                    case 18:
+                        Console.Clear();
+                        Console.WriteLine("Enter the book title:");
+                        string bookTitle = Console.ReadLine();
+
+                        Console.WriteLine("\nEnter the author is name:");
+                        string bookAuthor = Console.ReadLine();
+
+                        Book myBook = new Book(bookTitle, bookAuthor);
+                        Console.WriteLine(myBook.ToString());
+                        next = NextOrStop();
+                        break;
+                    case 19:
+                        Console.Clear();
+                        Tuples();
+                        next = NextOrStop();
+                        break;
+                    case 20:
+                        Console.Clear();
+                        Collections();
+                        next = NextOrStop();
+                        break;
+                    case 21:
+                        Console.Clear();
+                        WorkingWithFiles();
+                        next = NextOrStop();
+                        break;
+                    case 22:
+                        Console.Clear();
+                        NullableTypes();
+                        next = NextOrStop();
+                        break;
+                }
             }
-            switch (n)
-            {
-                case 1:
-                    VariablesAndDataTypes();
-                    break;
-                case 2:
-                    IfElse();
-                    break;
-                case 3:
-                    Loop();
-                    break;
-                case 4:
-                    ArrayList();
-                    break;
-                case 5:
-                    BoxingandUnboxing();
-                    break;
-                case 6:
-                    Type();
-                    break;
-                case 7:
-                    Struct();
-                    break;
-                case 8:
-                    DateTime1();
-                    break;
-                case 9:
-                    WorkString();
-                    break;
-                case 10:
-                    Exception();
-                    break;
-                case 11:
-                    Functions();
-                    break;
-                case 12:
-                    Student student = new Student("PhucHN3", 10);
-                    Console.WriteLine("Student Details:");
-                    student.Display();
-                    List<int> scores = new List<int> { 1, 2, 3, 4, 5, 6 };
-                    double average = student.CalculateAverageMarks(scores);
-                    Console.WriteLine($"Average Marks: {average}");
-                    break;
-                case 13:
-                    Car car = new Car("Toyota", "Corolla", "Petrol");
-                    car.DisplayCarInfo();
-                    break;
-                case 14:
-                    Shape rectangle = new Rectangle(5, 10);
-                    Console.WriteLine(rectangle.CalculateArea());
-
-                    Shape circle = new Circle(7);
-                    Console.WriteLine(circle.CalculateArea());
-                    break;
-                case 15:
-                    CustomException();
-                    break;
-                case 16:
-                    Recursion();
-                    break;
-                case 17:
-                    Enumeration();
-                    break;
-                case 18:
-                    Console.Clear()
-                    Console.WriteLine("Enter the book title:");
-                    string bookTitle = Console.ReadLine();
-
-                    Console.WriteLine("\nEnter the author is name:");
-                    string bookAuthor = Console.ReadLine();
-
-                    Book myBook = new Book(bookTitle, bookAuthor);
-                    Console.WriteLine(myBook.ToString());
-                    break;
-                case 19:
-                    Tuples();
-                    break;
-                case 20:
-                    Collections();
-                    break;
-                case 21:
-                    WorkingWithFiles();
-                    break;
-                case 22:
-                    NullableTypes();
-                    break;
-            }
+        }
+        static bool NextOrStop()
+        {
+            Console.WriteLine("\nDo you want choose example(ok or exit)? : ");
+            var value = Console.ReadLine();
+            if (value != "ok") return false;
+            return true;
         }
         //1.Variables and Data Types
         static void VariablesAndDataTypes()
@@ -148,26 +203,26 @@ namespace PhucHN3
             char charVar = 'P';
 
             Console.WriteLine("Initial values:");
-            Console.WriteLine($"\nInteger: {intVar}");
-            Console.WriteLine($"\nDouble: {doubleVar}");
-            Console.WriteLine($"\nString: {strVar}");
-            Console.WriteLine($"\nBoolean: {boolVar}");
-            Console.WriteLine($"\nCharacter: {charVar}");
+            Console.WriteLine($"Integer: {intVar}");
+            Console.WriteLine($"Double: {doubleVar}");
+            Console.WriteLine($"String: {strVar}");
+            Console.WriteLine($"Boolean: {boolVar}");
+            Console.WriteLine($"Character: {charVar}");
 
             double addition = intVar + doubleVar;
             double subtraction = intVar - doubleVar;
             double multipliation = intVar * doubleVar;
             double division = intVar / doubleVar;
 
-            Console.WriteLine("\nArithmetic operations:");
-            Console.WriteLine($"\nSum (intVar + doubleVar) = {intVar}");
-            Console.WriteLine($"\nSubtraction (intVar - doubleVar) = {subtraction}");
-            Console.WriteLine($"\nMultipliation (intVar * doubleVar) = {multipliation}");
-            Console.WriteLine($"\ndivision (intVar / doubleVar) = {division}");
+            Console.WriteLine("Arithmetic operations:");
+            Console.WriteLine($"Sum (intVar + doubleVar) = {intVar}");
+            Console.WriteLine($"Subtraction (intVar - doubleVar) = {subtraction}");
+            Console.WriteLine($"Multipliation (intVar * doubleVar) = {multipliation}");
+            Console.WriteLine($"division (intVar / doubleVar) = {division}");
 
             // String concatenation
             string message = strVar + ", My name is: " + charVar;
-            Console.WriteLine("\nString concatenation:");
+            Console.WriteLine("String concatenation:");
             Console.WriteLine(message);
         }
         //2. Conditional Statements
@@ -309,11 +364,11 @@ namespace PhucHN3
         static void BoxingandUnboxing()
         {
             int number = 123;
-            Console.WriteLine(\nnumber.GetType());
+            Console.WriteLine(number.GetType());
             object boxing = number;
-            Console.WriteLine(\nboxing.GetType());
+            Console.WriteLine(boxing.GetType());
             number = (int)boxing;
-            Console.WriteLine(\nnumber.GetType());
+            Console.WriteLine(number.GetType());
         }
         //6. Value Type and Reference Type
         struct MyStruct
