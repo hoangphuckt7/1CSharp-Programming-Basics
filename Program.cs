@@ -21,29 +21,29 @@ namespace PhucHN3
         static void Main(string[] args)
         {
             Console.WriteLine("1. Variables and Data Types");
-            Console.WriteLine("2. Conditional Statements");
-            Console.WriteLine("3. Loops");
-            Console.WriteLine("4. Arrays and Lists");
-            Console.WriteLine("5. Boxing and Unboxing");
-            Console.WriteLine("6. Value Type and Reference Type");
-            Console.WriteLine("7. Struct");
-            Console.WriteLine("8. DateTime");
-            Console.WriteLine("9. Working with Strings");
-            Console.WriteLine("10. Exception Handling");
-            Console.WriteLine("11. Functions");
-            Console.WriteLine("12. Classes and Objects");
-            Console.WriteLine("13. Inheritance");
-            Console.WriteLine("14. Polymorphism");
-            Console.WriteLine("15. Exception Handling with Custom Exceptions");
-            Console.WriteLine("16. Recursion in Functions");
-            Console.WriteLine("17. Using Enumerations");
-            Console.WriteLine("18. Properties in Classes");
-            Console.WriteLine("19. Using Tuples");
-            Console.WriteLine("20. Collections");
-            Console.WriteLine("21. Working with Files");
-            Console.WriteLine("22. Using Nullable Types");
-            Console.WriteLine("23. Debugging Basics");
-            Console.Write("chosse number: ");
+            Console.WriteLine("\n2. Conditional Statements");
+            Console.WriteLine("\n3. Loops");
+            Console.WriteLine("\n4. Arrays and Lists");
+            Console.WriteLine("\n5. Boxing and Unboxing");
+            Console.WriteLine("\n6. Value Type and Reference Type");
+            Console.WriteLine("\n7. Struct");
+            Console.WriteLine("\n8. DateTime");
+            Console.WriteLine("\n9. Working with Strings");
+            Console.WriteLine("\n10. Exception Handling");
+            Console.WriteLine("\n11. Functions");
+            Console.WriteLine("\n12. Classes and Objects");
+            Console.WriteLine("\n13. Inheritance");
+            Console.WriteLine("\n14. Polymorphism");
+            Console.WriteLine("\n15. Exception Handling with Custom Exceptions");
+            Console.WriteLine("\n16. Recursion in Functions");
+            Console.WriteLine("\n17. Using Enumerations");
+            Console.WriteLine("\n18. Properties in Classes");
+            Console.WriteLine("\n19. Using Tuples");
+            Console.WriteLine("\n20. Collections");
+            Console.WriteLine("\n21. Working with Files");
+            Console.WriteLine("\n22. Using Nullable Types");
+            Console.WriteLine("\n23. Debugging Basics");
+            Console.Write("\nchosse number: ");
             int n = int.Parse(Console.ReadLine());
             if (n == 0 || n == null)
             {
@@ -114,10 +114,11 @@ namespace PhucHN3
                     Enumeration();
                     break;
                 case 18:
+                    Console.Clear()
                     Console.WriteLine("Enter the book title:");
                     string bookTitle = Console.ReadLine();
 
-                    Console.WriteLine("Enter the author is name:");
+                    Console.WriteLine("\nEnter the author is name:");
                     string bookAuthor = Console.ReadLine();
 
                     Book myBook = new Book(bookTitle, bookAuthor);
@@ -147,11 +148,11 @@ namespace PhucHN3
             char charVar = 'P';
 
             Console.WriteLine("Initial values:");
-            Console.WriteLine($"Integer: {intVar}");
-            Console.WriteLine($"Double: {doubleVar}");
-            Console.WriteLine($"String: {strVar}");
-            Console.WriteLine($"Boolean: {boolVar}");
-            Console.WriteLine($"Character: {charVar}");
+            Console.WriteLine($"\nInteger: {intVar}");
+            Console.WriteLine($"\nDouble: {doubleVar}");
+            Console.WriteLine($"\nString: {strVar}");
+            Console.WriteLine($"\nBoolean: {boolVar}");
+            Console.WriteLine($"\nCharacter: {charVar}");
 
             double addition = intVar + doubleVar;
             double subtraction = intVar - doubleVar;
@@ -159,10 +160,10 @@ namespace PhucHN3
             double division = intVar / doubleVar;
 
             Console.WriteLine("\nArithmetic operations:");
-            Console.WriteLine($"Sum (intVar + doubleVar) = {intVar}");
-            Console.WriteLine($"Subtraction (intVar - doubleVar) = {subtraction}");
-            Console.WriteLine($"Multipliation (intVar * doubleVar) = {multipliation}");
-            Console.WriteLine($"division (intVar / doubleVar) = {division}");
+            Console.WriteLine($"\nSum (intVar + doubleVar) = {intVar}");
+            Console.WriteLine($"\nSubtraction (intVar - doubleVar) = {subtraction}");
+            Console.WriteLine($"\nMultipliation (intVar * doubleVar) = {multipliation}");
+            Console.WriteLine($"\ndivision (intVar / doubleVar) = {division}");
 
             // String concatenation
             string message = strVar + ", My name is: " + charVar;
@@ -308,11 +309,11 @@ namespace PhucHN3
         static void BoxingandUnboxing()
         {
             int number = 123;
-            Console.WriteLine(number.GetType());
+            Console.WriteLine(\nnumber.GetType());
             object boxing = number;
-            Console.WriteLine(boxing.GetType());
+            Console.WriteLine(\nboxing.GetType());
             number = (int)boxing;
-            Console.WriteLine(number.GetType());
+            Console.WriteLine(\nnumber.GetType());
         }
         //6. Value Type and Reference Type
         struct MyStruct
@@ -328,13 +329,13 @@ namespace PhucHN3
         static void Type()
         {
             // Demonstrate Value Type behavior
-            Console.WriteLine("Value Type :");
+            Console.WriteLine("\nValue Type :");
             MyStruct struct1 = new MyStruct { value = 10 };
             MyStruct struct2 = struct1;
             struct2.value = 20;
 
-            Console.WriteLine($"struct1.Value = {struct1.value}");
-            Console.WriteLine($"struct2.Value = {struct2.value}");
+            Console.WriteLine($"\nstruct1.Value = {struct1.value}");
+            Console.WriteLine($"\nstruct2.Value = {struct2.value}");
 
             // Demonstrate Reference Type behavior
             Console.WriteLine("\nReference Type :");
@@ -342,8 +343,8 @@ namespace PhucHN3
             MyClass class2 = class1;
             class2.value = 20;
 
-            Console.WriteLine($"class1.Value = {class1.value}");
-            Console.WriteLine($"class2.Value = {class2.value}");
+            Console.WriteLine($"\nclass1.Value = {class1.value}");
+            Console.WriteLine($"\nclass2.Value = {class2.value}");
 
             Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey();
@@ -376,7 +377,7 @@ namespace PhucHN3
         static void DateTime1()
         {
             DateTime date = DateTime.Now;
-            Console.WriteLine($"{DateTime.Now}");
+            Console.WriteLine($"\n{DateTime.Now}");
             Console.Write("Enter date 1 (yyyy-mm-dd): ");
             var input1 = DateTime.Parse(Console.ReadLine());
             Console.Write("Enter date 2 (yyyy-mm-dd): ");
@@ -387,18 +388,18 @@ namespace PhucHN3
             int resulf = Math.Abs(Calculate.Days);
             Console.WriteLine(resulf);
             string formattedDate = date.ToString("MM/dd/yyyy");
-            Console.WriteLine($" date now: {formattedDate}");
+            Console.WriteLine($"\n date now: {formattedDate}");
         }
         //9. Working with Strings
         static void WorkString()
         {
             string input = "Hello World";
-            Console.WriteLine("Chuoi ban dau: " + input);
+            Console.WriteLine("\nChuoi ban dau: " + input);
             // Reverse the string
             char[] charArray = input.ToCharArray();
             Array.Reverse(charArray);
             string reversed = new string(charArray);
-            Console.WriteLine("Reversed String: " + reversed);
+            Console.WriteLine("\nReversed String: " + reversed);
 
             // Count vowels and consonants
             int vowelCount = 0, consonantCount = 0;
