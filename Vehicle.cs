@@ -9,15 +9,15 @@ namespace PhucHN3
 {
     public class Vehicle
     {
-        public string Make;
-        public string Model;
+        protected string Make;
+        protected string Model;
 
-        public Vehicle( string make, string model)
+        protected Vehicle( string make, string model)
         {
             Make = make;
             Model = model;
         }
-        public void DisplayCar()
+        protected void DisplayCar()
         {
             Console.WriteLine($"Make: {Make}, Model: {Model}");
         }
